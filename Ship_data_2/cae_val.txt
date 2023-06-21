@@ -1,0 +1,36 @@
+path,catename
+Tanker/408.npy,Tanker
+Tanker/254.npy,Tanker
+Tanker/261.npy,Tanker
+Tanker/117.npy,Tanker
+Tanker/160.npy,Tanker
+Tanker/444.npy,Tanker
+Tanker/252.npy,Tanker
+Tanker/255.npy,Tanker
+Tanker/446.npy,Tanker
+Tanker/339.npy,Tanker
+Container Ship/77.npy,Container Ship
+Container Ship/246.npy,Container Ship
+Container Ship/426.npy,Container Ship
+Container Ship/228.npy,Container Ship
+Container Ship/388.npy,Container Ship
+Container Ship/424.npy,Container Ship
+Container Ship/294.npy,Container Ship
+Container Ship/208.npy,Container Ship
+Container Ship/260.npy,Container Ship
+Container Ship/157.npy,Container Ship
+Container Ship/13.npy,Container Ship
+Container Ship/397.npy,Container Ship
+Container Ship/361.npy,Container Ship
+Container Ship/178.npy,Container Ship
+Bulk Carrier/217.npy,Bulk Carrier
+Bulk Carrier/276.npy,Bulk Carrier
+Bulk Carrier/142.npy,Bulk Carrier
+Bulk Carrier/383.npy,Bulk Carrier
+Bulk Carrier/41.npy,Bulk Carrier
+Bulk Carrier/103.npy,Bulk Carrier
+Bulk Carrier/359.npy,Bulk Carrier
+Bulk Carrier/268.npy,Bulk Carrier
+Bulk Carrier/201.npy,Bulk Carrier
+Bulk Carrier/360.npy,Bulk Carrier
+Bulk Carrier/40.npy,Bulk Carrier

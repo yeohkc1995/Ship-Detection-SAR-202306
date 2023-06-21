@@ -1,0 +1,4 @@
+catename,label
+Container Ship,0
+Tanker,1
+Bulk Carrier,2

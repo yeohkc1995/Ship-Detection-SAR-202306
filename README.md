@@ -14,7 +14,7 @@ DSN:
 * When implementing the DSN on m2 mac, torch.device is set to MPS and num_workers set to 0. Change the values to suit individual needs.
 * Generate bounding box data and training data using Dataset Preparation.ipynb
 * Model 2 folder contains the trained joint neural net
-* SLC data stored in Classes.zip
+* SLC data stored in Classes.zip (unzip before use)
 * Make sure that the path to boundingbox.csv is mentioned under the read_text() function found in SLC_dataset.py
 
 Step 1: Generate 4D signal spe4D via fft based time-frequency analysis, output spe4_min_max values and img_mean std values
@@ -65,10 +65,38 @@ python train_joint.py --img_root ../Ship_data_2/Classes/ ../Ship_data_2/Classes/
                       --img_mean_std 0.29982 0.07479776 \
                       --catefile ../Ship_data_2/class_mapping.txt \
                       --img_model ../model/tsx.pth \
-                      --save_model_path ../model2/slc_joint_ \
+                      --save_model_path ../model/slc_joint_ \
                       --epoch_num 100 \
                       --cate_num 3 \
                       --device 0
+```
+Step 6: Test the model + Visualise output
+```
+python ttest_joint.py --img_root ../Ship_data_2/Classes/ \
+                      --spe_root ../Ship_data_2/spe3D/ \
+                      --data_file ../Ship_data_2/slc_val.txt \
+                      --spe3D_max 0.18485471606254578 \
+                      --img_feat_max 5.859713554382324 \
+                      --img_mean_std 0.29982 0.07479776 \
+                      --catefile ../Ship_data_2/class_mapping.txt \
+                      --pretrained_model ../model/slc_joint_epoch100.pth \
+                      --cate_num 3 \
+                      --device 0
+```
+To Save output of model (Test model with one image --> batchsize=1):
+Uncomment this region
+```
+filtered_data = label2name[label2name['label'] == int(pred)]
+     catename = filtered_data['catename'].tolist()
+     ground_truth = "Tanker"
+     for i in catename:
+         if i == ground_truth:
+             print(f'The model predicted that the class of the image is {ground_truth}! ')
+         else:
+             print(f'The model failed to predict the class correctly! The predicted class was {i}.')
+    bb_pred = bbox_output.detach().cpu().numpy()
+    bb_pred = bb_pred.astype(int)
+    np.save('/Users/ryansheah/Downloads/DSN_project/DSN-master/data/Ship_data_2/predicted_bb.npy', bb_pred)  # save
 ```
 
 

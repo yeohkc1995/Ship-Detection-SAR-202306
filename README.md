@@ -82,6 +82,8 @@ python ttest_joint.py --img_root ../Ship_data_2/Classes/ \
                       --pretrained_model ../model/slc_joint_epoch100.pth \
                       --cate_num 3 \
                       --device 0
+
+# --batch_size n (to specify batchsize)
 ```
 To Save output of model (Test model with one image --> batchsize=1):
 Uncomment this region

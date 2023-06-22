@@ -15,7 +15,7 @@ DSN:
 * Generate bounding box data and training data using Dataset Preparation.ipynb
 * Model 2 folder contains the trained joint neural net
 * SLC data stored in Classes.zip
-
+* Make sure that the path to boundingbox.csv is mentioned under the read_text() function found in SLC_dataset.py
 
 Step 1: Generate 4D signal spe4D via fft based time-frequency analysis, output spe4_min_max values and img_mean std values
 

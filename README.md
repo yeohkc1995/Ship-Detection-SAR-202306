@@ -12,7 +12,6 @@ IcebergShipDetection:
 DSN:
 
 * When implementing the DSN on m2 mac, torch.device is set to MPS and num_workers set to 0. Change the values to suit individual needs.
-* Relative file paths not used. Change accordingly.
 * Generate bounding box data and training data using Dataset Preparation.ipynb
 
 

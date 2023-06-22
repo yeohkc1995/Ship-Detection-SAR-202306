@@ -4,7 +4,7 @@ Credits:
 1) https://github.com/eikeschuett/IcebergShipDetection 
 2) https://github.com/Alien9427/DSN/tree/master
 
-IcebergShipDetection:
+IcebergShipClassification:
 * Obtain SAR images from the Corpernicus Open Access Hub to test model on real world data.
 
 

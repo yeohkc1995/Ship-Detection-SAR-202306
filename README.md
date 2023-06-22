@@ -31,7 +31,7 @@ python train_cae.py --data_file ../Ship_data2/cae_train.txt ../Ship_data_2/cae_v
                     --data_root ../Ship_data2/spe4D/ ../Ship_data_2/spe4D/ \
                     --catename2label ../Ship_data_2/class_mapping.txt \
                     --save_model_path ../model/slc_cae_ \
-                    --pretrained_model ../model/slc_cae_3.pth \
+                    --pretrained_model ../model/slc_spexy_cae_3.pth \
                     --spe4D_min_max 0.0011597341927439826 10.628257178154184 \
                     --device 0
 ```
@@ -40,7 +40,7 @@ Step 3: generate spatially aligned frequency features spe3D using trained cae mo
 python mapping_r4_r3.py --data_txt ../Ship_data_2/file_paths_all.txt \
                         --save_dir ../Ship_data_2/spe3D/ \            # spe3D features
                         --spe_dir ../Ship_data_2/Ship_data_2/spe4D/ \
-                        --pretrained_model ../model/slc_cae_3.pth \
+                        --pretrained_model ../model/slc_cae_3_iter1000.pth \
                         --catefile ../Ship_data_2/class_mapping.txt \
                         --spe4D_min_max 0.0011597341927439826 10.628257178154184 \
                         --batchsize 2

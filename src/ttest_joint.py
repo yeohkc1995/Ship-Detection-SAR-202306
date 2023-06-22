@@ -160,7 +160,7 @@ def joint_test(config):
         #
         # bb_pred = bbox_output.detach().cpu().numpy()
         # bb_pred = bb_pred.astype(int)
-        # np.save('/Users/ryansheah/Downloads/DSN_project/DSN-master/data/Ship_data_2/predicted_bb.npy', bb_pred)  # save
+        # np.save('../Ship_data_2/predicted_bb.npy', bb_pred)  # save
 
         acc_num += torch.sum(torch.squeeze(pred) == val_label.data).float()
         data_num += val_label.size()[0]

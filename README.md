@@ -100,6 +100,6 @@ filtered_data = label2name[label2name['label'] == int(pred)]
     bb_pred = bb_pred.astype(int)
     np.save('../Ship_data_2/predicted_bb.npy', bb_pred)  # save
 ```
-After, saving the output bounding box coordinates of model, make use of data_visualisation.py to see the bounding box with its associated image.
+After, saving the output bounding box coordinates of model, make use of data_visualisation.py to view the bounding box with its associated image.
 
 

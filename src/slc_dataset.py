@@ -14,7 +14,7 @@ def read_txt(txt_file, catefile):
         label = list(catename2label.loc[catename2label['catename'] == catename]['label'])[0]
         pd_data.loc[i]['label'] = label
 
-    bb_df = pd.read_csv('/data/Ship_data_2/boundingbox.csv')
+    bb_df = pd.read_csv('/Ship_data_2/boundingbox.csv')
     bb_df['bb_array'] = bb_df['bb_array'].apply(lambda x: np.fromstring(x[1:-1], sep=' ', dtype=np.float32))
 
     pd_data = pd.merge(pd_data, bb_df, on='path', how='left')

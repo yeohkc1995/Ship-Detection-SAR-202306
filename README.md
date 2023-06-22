@@ -12,6 +12,8 @@ IcebergShipDetection:
 DSN:
 
 * When implementing the DSN on m2 mac, torch.device is set to MPS and num_workers set to 0. Change the values to suit individual needs.
+* Relative file paths not used. Change accordingly.
+* Generate bounding box data and training data using Dataset Preparation.ipynb
 
 
 Step 1: Generate 4D signal spe4D via fft based time-frequency analysis, output spe4_min_max values and img_mean std values
